@@ -418,6 +418,7 @@
     <module>org.openhab.binding.yamahamusiccast</module>
     <module>org.openhab.binding.yamahareceiver</module>
     <module>org.openhab.binding.yioremote</module>
+    <module>org.openhab.binding.yandexstation</module>
     <module>org.openhab.binding.yeelight</module>
     <module>org.openhab.binding.zoneminder</module>
     <module>org.openhab.binding.zway</module>
