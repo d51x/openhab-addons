@@ -56,6 +56,7 @@ public class GoogleTVMessageParser {
         try {
             if (msg.startsWith(DELIMITER_1A)) {
                 logger.warn("{} - GoogleTV Error Message: {}", thingId, msg);
+                callback.getHandler().dispose();
             } else if (msg.startsWith(DELIMITER_0A)) {
                 // First message on connection from GTV
                 //
@@ -329,8 +330,8 @@ public class GoogleTVMessageParser {
                 logger.info("{} - Unknown payload received. {} {}", thingId, len, msg);
             }
         } catch (Exception e) {
-            logger.debug("{} - Message Parser Exception on {}", thingId, msg);
-            logger.debug("Message Parser Caught Exception", e);
+            logger.warn("{} - Message Parser Exception on {}", thingId, msg);
+            logger.warn("{} - Message Parser Caught Exception", thingId, e);
         }
     }
 }
